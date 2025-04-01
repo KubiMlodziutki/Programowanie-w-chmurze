@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+h1, h2, h3 {
+    color: #8d8d8d;
+}
+  
+.navbar {
+    border-bottom: 3px solid #082c10;
+}
+  
+
+.fade-in-fast {
+    opacity: 0;
+    animation: fadeInFast 0.7s ease-in forwards;
+}
+  
+@keyframes fadeInFast {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.fade-in-later {
+    opacity: 0;
+    animation: fadeInLater 0.8s ease-in 0.5s forwards;   
+}
+  
+@keyframes fadeInLater {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.pt-6 {
+    padding-top: 4rem !important;
+}
+  
+.pt-7 {
+    padding-top: 6rem !important;
+}
+
+.card {
+    height: 100%;
+}
+
+.portfolio-img {
+    max-height: 220px;
+    object-fit: cover;
+}
+  

@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<main class="flex-grow-1 pt-7 pb-5">
+  <div class="container fade-in-fast">
+    <header class="text-center mb-4">
+      <h1>Księga gości</h1>
+      <p>Zostaw swój ślad – napisz kilka słów!</p>
+    </header>
+    <form action="#" method="post" class="mb-5">
+      <div class="mb-3">
+        <label for="guestName" class="form-label">Podpis</label>
+        <input
+          type="text"
+          class="form-control"
+          id="guestName"
+          placeholder="Podpisz się"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="guestMessage" class="form-label">Wiadomość</label>
+        <textarea
+          class="form-control"
+          id="guestMessage"
+          rows="3"
+          placeholder="Twoja wiadomość"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Dodaj wpis</button>
+    </form>
+    <h2>Ostatnie wpisy</h2>
+    <div class="card bg-dark text-white mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Jan Sebastian</h5>
+        <p class="card-text">
+          Świetne portfolio, żaby wyglądają niesamowicie!
+        </p>
+      </div>
+    </div>
+    <div class="card bg-dark text-white mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Anna Kowalska</h5>
+        <p class="card-text">Bardzo inspirujące zdjęcia, trzymam kciuki!</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

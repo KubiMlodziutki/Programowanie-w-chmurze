@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<main class="flex-grow-1 pt-7 pb-5">
+  <div class="container fade-in-fast">
+    <h1 class="text-center mb-4">Moje Prace</h1>
+    <p class="text-center mb-5">
+      Zapraszam do obejrzenia galerii moich ulubionych zdjęć żab w różnych
+      sceneriach.
+    </p>
+  </div>
+  <div class="container fade-in-later">
+    <h2 class="text-center mb-4">Ostatnie projekty</h2>
+    <div class="row g-4">
+      <% const photos = [
+        { src: 'zaba1.jpg', title: 'Żaba w trawie', text: 'Ujęcie prosto z mojego ogródka' },
+        { src: 'zaba2.jpg', title: 'Zbliżenie', text: 'Była zainteresowana wielkim obiektywem' },
+        { src: 'zaba3.jpg', title: 'Żaba na liściu', text: 'Pamiątka z tropików' },
+        { src: 'zaba4.jpg', title: 'Jeździec', text: 'Żaby korzystają z transportu publicznego' },
+        { src: 'zaba5.png', title: 'Madame żaba', text: 'Fryzura niczym z Renesansu' },
+        { src: 'zaba6.jpg', title: 'Zamaskowana', text: 'Nie lubi paparazzi' },
+        { src: 'zaba7.jpeg', title: 'Smutna żaba', text: 'Na pocieszenie zabrałem ją na lody' },
+        { src: 'zaba8.jpg', title: 'Niebieska żaba', text: 'Mutacja lub radioaktywność?' },
+        { src: 'zaba9.jpg', title: 'Akrobata', text: 'Klasa sama w sobie' },
+      ]; %>
+  
+      <% photos.forEach(photo => { %>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card bg-dark text-white h-100">
+            <img src="/images/<%= photo.src %>" class="card-img-top portfolio-img" alt="<%= photo.title %>" />
+            <div class="card-body">
+              <h5 class="card-title"><%= photo.title %></h5>
+              <p class="card-text"><%= photo.text %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

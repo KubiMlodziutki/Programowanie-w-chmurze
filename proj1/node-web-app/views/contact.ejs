@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<main class="flex-grow-1 pt-7 pb-5">
+  <div class="container fade-in-fast">
+    <h1 class="text-center mb-4">Kontakt</h1>
+    <p class="text-center mb-5">
+      Masz pytania? Skontaktuj się ze mną, aby dowiedzieć się więcej lub umówić
+      sesję zdjęciową!
+    </p>
+
+    <form action="/submit-form" method="POST" class="mb-4">
+      <div class="mb-3">
+        <label for="name" class="form-label">Imię i nazwisko</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Wpisz swoje imię i nazwisko"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Wpisz swój email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Wiadomość</label>
+        <textarea
+          class="form-control"
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Twoja wiadomość"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Wyślij</button>
+    </form>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
